@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+    <head>    
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="calculadora.js"></script>
+        <title>Calculadora</title>    
+    </head>
+    <body class="fundo">
+        <div class="container">
+            <div class="form">
+                <div>
+                    <input id="tela" name="input" type="text" class="value">
+                </div>
+                <div>
+                    <button class="botao3" onclick="clean()">AC</button>
+                    <button class="botao" onclick="exibeNumer('*0.01')">%</button>
+                    <button class="botao" onclick="exibeNumer('/')">÷</button>
+                </div>
+                <div>
+                    <button class="botao" onclick="exibeNumer('7')">7</button>
+                    <button class="botao" onclick="exibeNumer('8')">8</button>
+                    <button class="botao" onclick="exibeNumer('9')">9</button>
+                    <button class="botao" onclick="exibeNumer('*')">X</button>
+                </div>
+                <div>
+                    <button class="botao" onclick="exibeNumer('4')">4</button>
+                    <button class="botao" onclick="exibeNumer('5')">5</button>
+                    <button class="botao" onclick="exibeNumer('6')">6</button>
+                    <button class="botao" onclick="exibeNumer('-')">-</button>
+                </div>
+                <div>
+                    <button class="botao" onclick="exibeNumer('1')">1</button>
+                    <button class="botao" onclick="exibeNumer('2')">2</button>
+                    <button class="botao" onclick="exibeNumer('3')">3</button>
+                    <button class="botao" onclick="exibeNumer('+')">+</button>
+                </div>
+                <div>
+                    <button class="botao3" onclick="exibeNumer('0')">0</button>
+                    <button class="botao" onclick="exibeNumer('.')">.</button>
+                    <button class="botao2" onclick="equal()">=</button>
+                </div>
+            </div>
+        </div>    
+    </body>        
+       
     
-</body>
 </html>
