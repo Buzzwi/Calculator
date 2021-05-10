@@ -47,7 +47,3 @@ function equal(){
 	
 }
 
-function clean(){
-	document.getElementById("tela").value += '';
-	
-}
