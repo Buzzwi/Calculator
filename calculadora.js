@@ -1,4 +1,3 @@
-var resposta = ''
 var numero = [];
 var a = '';
 var b = '';
@@ -28,7 +27,7 @@ function equal(){
 	var num1 = '';
 	var num2 = '';
 	var sinal = '';
-	var resposta = '';
+	
 	
 
 	for(i=0; i<str.length ; i++){
@@ -41,9 +40,13 @@ function equal(){
 		}
 
 		else 
-			sinal = str[i];		
+			sinal = str[i];	
+			ans = eval();	
 	}					
-	document.getElementById("tela").value = resposta;	
+		document.getElementById("tela").value = ans;
 	
 }
 
+function eraseCal(){
+	document.getElementById("tela").value	= ''
+}
