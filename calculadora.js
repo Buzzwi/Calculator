@@ -4,7 +4,8 @@ var b = '';
 
 
 function exibeNumer(digit){
-	console.log(digit);
+	console.log(typeof digit);
+	
 
 	document.getElementById("tela").value+=digit; 
 	
@@ -27,11 +28,12 @@ function equal(){
 	var num1 = '';
 	var num2 = '';
 	var sinal = '';
+	var ans ;
 	
 	
 
 	for(i=0; i<str.length ; i++){
-		if (str[i]!= '+' || str[i]!= '-' || str[i]!= '*' || str[i]!= '/')
+		if (str[i]!== '+' && str[i]!== '-' && str[i]!== '*' && str[i]!== '/')
 		{ 
 			if	(sinal == '')
 				num1 = num1 + str[i];
@@ -41,9 +43,23 @@ function equal(){
 
 		else 
 			sinal = str[i];	
-			ans = eval();	
+			
 	}					
-		document.getElementById("tela").value = ans;
+	num1 = parseFloat(num1);
+	num2 = parseFloat(num2);
+
+	if (sinal=='+')
+		ans = num1+num2;
+	else if (sinal=='-')
+		ans = num1-num2;
+	else if (sinal=='*')
+		ans = num1*num2;
+	else if (sinal=='/')
+		ans = num1/num2;
+	else
+		ans = 'Resultado Indefinido';
+
+	document.getElementById("tela").value = ans;
 	
 }
 
